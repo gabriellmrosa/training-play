@@ -1,3 +1,107 @@
+/* Variables */
+:root{
+  --color-primary:#D65A31;
+
+  --star-color: #EBB103;
+  --color-white: #fff;
+  --color-auxiliar-gray: #f4f4f4;
+  --color-lightest-gray: #e3e3e3;
+  --color-lighter-gray: #c5c5c5;
+  --color-gray: #a7a7a7;
+  --color-gray-text: #eee;
+  --color-darker-gray: #6b6b6b;
+  --color-darker: #222831;
+  --color-black: #000;
+
+  --margin-smaller: 8px;
+  --margin-small:16px;
+  --margin-small-medium: 24px;
+  --margin-medium: 32px;
+  --margin-medium-big: 40px;
+  --margin-big: 48px;
+  --margin-bigger: 56px;
+
+  --col-1: calc(100% / 12);
+  --col-2: calc(var(--col-1) * 2);
+  --col-3: calc(var(--col-1) * 3);
+  --col-4: calc(var(--col-1) * 4);
+  --col-5: calc(var(--col-1) * 5);
+  --col-6: 50%;
+  --col-7: calc(var(--col-1) * 7);
+  --col-8: calc(var(--col-1) * 8);
+  --col-9: calc(var(--col-1) * 9);
+  --col-10: calc(var(--col-1) * 10);
+  --col-11: calc(var(--col-1) * 11);
+  --col-12: 100%;
+
+  --radius-smaller: 2px;
+  --radius-normal: 4px;
+  --radius-big: 8px;
+
+  --shadow-easy: 0px 4px 4px rgba(0,0,0,0.05);
+}
+/* /Variables */
+
+.btn{
+  border:1px solid #fff;
+  background: #fff;
+  color: var(--color-darker);
+  padding:8px 16px;
+  border-radius: var(--radius-normal);
+  font-weight: 600;
+}
+
+.btn-primary{
+  background: var(--color-primary);
+  border:1px solid var(--color-primary);
+  color:#fff;
+}
+
+.btn-line{
+  background: none;
+  color:var(--color-primary);
+}
+.btn-primary.btn-line:hover{
+  background: var(--color-primary);
+  color:var(--color-white);
+}
+
+.btn-large{
+  font-size: 16px;
+  padding:16px 24px;
+  margin-top:32px;
+}
+
+*[class*="col-"]:not(:last-child){
+  padding:0px 16px 0px 0px;
+}
+
+.container{
+  width: 100%;
+  max-width: 1360px;
+  margin:0px auto;
+  padding:0px 32px;
+}
+
 body{
-  background:#222831;
+  background:var(--color-darker);
+  font-family: 'Montserrat', sans-serif;
+}
+
+header{
+  padding:32px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img{
+  width: 133px;
+
+}
+
+h1{
+  font-size: 32px;
+  font-weight: 700;
+  color:#ffff;
 }
