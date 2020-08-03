@@ -20,3 +20,5 @@ function App() {
 }
 
 export default App;
+//https://codesandbox.io/s/github/rakannimer/react-firebase/tree/master/modules/sandboxes/firebase-auth?from-embed=&file=/src/index.tsx:68-299
+//https://react-firebase-js.com/docs/react-firebase-auth/getting-started#install
