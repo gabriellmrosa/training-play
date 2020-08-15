@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './img/training-play-logo.svg'
+import Carousel from './component/index'
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <button className="btn btn-primary btn-large" type="button">Assine agora</button>
         </div>
       </section>
+
+      <Carousel/>
     </div>
   );
 }
