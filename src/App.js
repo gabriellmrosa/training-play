@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './img/training-play-logo.svg'
-import Carousel from './component/index'
+import Carousel from './component/carousel/index'
+import ColapseInfoComponent from './component/colapse-info';
 
 function App() {
   return (
@@ -13,11 +14,46 @@ function App() {
       <section>
         <div className="container">
           <h1>Encontre a melhor serie de exercícios para maratonar</h1>
+          <p className="price-plan">R$ 19,90/mês
+            <span>*cancele quando quiser</span>
+          </p>
           <button className="btn btn-primary btn-large" type="button">Assine agora</button>
         </div>
       </section>
 
-      <Carousel/>
+      <section className="serie-section">
+        <div className="container">
+          <h2 className="title-serie">Treino em casa</h2>
+          <p className="coach-name">Coach Vinicius Lamas</p>
+        </div>
+        <Carousel/>
+      </section>
+
+      
+      <section>
+        <div className="container">
+          <h2>Dúvidas Frequentes</h2>
+
+          <div>
+            <ColapseInfoComponent 
+              id={0}
+              title={'Conectar SmartTV'}
+              content={'Assa eget risus dictum dapibus. Suspendisse eget imperdiet nisl, vitae rutrum risus. Etiam tincidunt ex ultrices.'}
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div className="container">
+
+            <div>
+              <h3>Dúvidas?</h3>
+              <p>contato@trainingplay.com.br</p>
+            </div>
+
+        </div>
+      </footer>
     </div>
   );
 }
