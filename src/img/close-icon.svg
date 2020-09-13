@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14.828" height="14.829" viewBox="0 0 14.828 14.829">
+  <g id="close-icon" transform="translate(-1010.586 2099.914)">
+    <path id="chevron-left" d="M6,9l6,6,6-6" transform="translate(1003 -2080.5) rotate(-90)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="chevron-left-2" data-name="chevron-left" d="M6,9l6,6,6-6" transform="translate(1033 -2104.5) rotate(90)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
