@@ -4,10 +4,14 @@ import Carousel from './component/carousel/index'
 import ColapseInfoComponent from './component/colapse-info';
 import DescriptionPageComponent from './component/description-page';
 import ModalVideoComponent from './component/modal-video';
+import ModalAlertComponent from './component/modal-alert';
+import ModalAssinarComponent from './component/modal-assinar';
 
 function App() {
 
   const [loginStatus, setLoginStatus] = useState(false);
+  const [modalAlert, setModalAlert] = useState(false);
+  const [modalAssinar, setModalAssinar] = useState(false);
 
   const [modalVideo, setModalVideo] = useState({
     active: false,
@@ -25,6 +29,9 @@ function App() {
   return (
     <div className="App">
 
+      <ModalAlertComponent active={modalAlert} setModalAlert={setModalAlert}/>
+      <ModalAssinarComponent active={modalAssinar} setModalAssinar={setModalAssinar}/>
+
       <ModalVideoComponent 
         data={modalVideo} 
         setModalVideo={setModalVideo} 
@@ -35,11 +42,12 @@ function App() {
         closeDescription={setModalFakeRouteDescription}
         loginStatus={loginStatus}
         setModalVideo={setModalVideo}
+        setModalAlert={setModalAlert}
       />
 
       <header>
         <img src={Logo} alt="Training Play | Escolha sua serie de treinos"/>
-        <button className="btn btn-primary btn-line" type="button">Entrar</button>
+        <button className="btn btn-primary btn-line" type="button" onClick={()=>setModalAssinar(true)}>Entrar</button>
       </header>
 
       <section>
@@ -57,7 +65,7 @@ function App() {
           <h2 className="title-serie">Treino em casa</h2>
           <p className="coach-name">Coach Vinicius Lamas</p>
         </div>
-        <Carousel openDescription={setModalFakeRouteDescription} openVideo={setModalVideo} loginStatus={loginStatus}/>
+        <Carousel openDescription={setModalFakeRouteDescription} openVideo={setModalVideo} loginStatus={loginStatus} setModalAlert={setModalAlert}/>
       </section>
 
       <section>

@@ -73,14 +73,19 @@ const ThumbDescriptionVideo = styled.div`
       border-radius:8px;
     }
 `
-const ThumbDescriptionVideoComponent = ({ description, thumbImage, title, access, setModalVideo, link })=>{
+const ThumbDescriptionVideoComponent = ({ description, thumbImage, title, access, setModalVideo, link, setModalAlert })=>{
 
     return(
         <ThumbDescriptionVideo>  
-            <div className="img-area" onClick={()=> setModalVideo(old=>({
-              active: true,
-              videoEmbed: link 
-            }))}>
+            <div className="img-area" onClick={
+              access ?
+              ()=>  setModalVideo(old=>({
+                    active: true,
+                    videoEmbed: link 
+                    }))
+              :
+              ()=>  setModalAlert(true)
+            }>
                 <div className="mask">
                     <img src={access ? customPlay : lockVideo} alt="Mask White"/>
                 </div>

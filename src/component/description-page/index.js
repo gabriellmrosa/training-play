@@ -44,7 +44,7 @@ const HeaderPage = styled.div`
   }
 ` 
 
-const DescriptionPageComponent = ({data, closeDescription, setModalVideo})=>{
+const DescriptionPageComponent = ({data, closeDescription, setModalVideo, setModalAlert})=>{
 
     return(
         <DescriptionPage active={data.active}>
@@ -62,6 +62,7 @@ const DescriptionPageComponent = ({data, closeDescription, setModalVideo})=>{
               access={data.access}
               link={data.link}
               setModalVideo={setModalVideo}
+              setModalAlert={setModalAlert}
             />
           </div>
         </DescriptionPage> 

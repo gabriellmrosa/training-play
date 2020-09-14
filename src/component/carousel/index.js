@@ -103,7 +103,7 @@ const Carousel = styled.div`
   }
 `
 
-const CarouselCompoent = ({openDescription, openVideo, loginStatus})=>{
+const CarouselCompoent = ({openDescription, openVideo, loginStatus, setModalAlert})=>{
   const [screenWidth, setScreenWidth] = useState(0);
   const [heightItem, setHeightItem] = useState(0);
 
@@ -206,7 +206,7 @@ const CarouselCompoent = ({openDescription, openVideo, loginStatus})=>{
               videoEmbed: element.link   
             })
             :
-            ()=>console.log('oi')
+            ()=> setModalAlert(true)
           }>
             <div className="mask">
               <img src={element.access ? customPlay : lockVideo} alt="Mask White"/>
