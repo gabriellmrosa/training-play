@@ -5,10 +5,7 @@ import chevronLeft from '../img/chevron-left.svg'
 import ThumbDescriptionVideoComponent from '../component/thumb-description-video'
 
 const DescriptionPage = styled.div`
-  position: fixed;
-  z-index: 100;
-  top: 0px;
-  left: 0px;
+ 
   background: var(--color-darker);
   width: 100%;
   height: 100vh;
@@ -44,10 +41,10 @@ const HeaderPage = styled.div`
   }
 ` 
 
-const DescriptionPageComponent = ({closeDescription, setModalVideo, setModalAlert,state})=>{
+const DescriptionPageComponent = ({closeDescription, setModalVideo, setModalAlert, state})=>{
 
   useEffect(()=>{
-   console.log(state)
+
   },[])
 
     return(

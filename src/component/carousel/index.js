@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+
 import styled from 'styled-components';
 import personalImage from '../../img/personal.png';
 import customPlay from '../../img/custom-play.svg';
@@ -216,14 +218,17 @@ const CarouselCompoent = ({openDescription, openVideo, loginStatus, setModalAler
           <h3>{element.title}</h3>
           <div className="description-area">
             <p>{element.description}</p>
-            <button className="link" type="button" onClick={()=> openDescription({
+            
+            {/* <button className="link" type="button" onClick={()=> openDescription({
               active: true,
               title: element.title, 
               description: element.description, 
               thumbImage: element.thumb,
               access: element.access,
               link: element.link
-            })}>Mais detalhes</button>
+            })}>Mais detalhes</button> */}
+
+            <Link className="link" to={`/about/${element.title.normalize("NFD").replace(/[^a-zA-Zs]/g, "")}`}>Olatudobem</Link>
           </div>
         </div>
       ))}

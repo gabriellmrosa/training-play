@@ -27,13 +27,13 @@ function Index() {
 
   return (
     <div className="App">
-      <ModalAlertComponent active={modalAlert} setModalAlert={setModalAlert}/>
-      <ModalAssinarComponent active={modalAssinar} setModalAssinar={setModalAssinar} setLoginStatus={setLoginStatus}/>
+      {/* <ModalAlertComponent active={modalAlert} setModalAlert={setModalAlert}/>
+      <ModalAssinarComponent active={modalAssinar} setModalAssinar={setModalAssinar} setLoginStatus={setLoginStatus}/> */}
 
-      <ModalVideoComponent 
+      {/* <ModalVideoComponent 
         data={modalVideo} 
         setModalVideo={setModalVideo} 
-      />
+      /> */}
 
       {/* <DescriptionPageComponent 
         data={modalFakeRouteDescription}
